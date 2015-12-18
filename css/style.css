@@ -1,6 +1,6 @@
 *{
-    font-family: "Courier New", Courier, monospace;
-    font-size: 12px;
+    font-family: Menlo,monospace,Arial,"Courier New", Courier;
+    font-size: 14px;
     margin: 0;
     padding: 0;
 }
@@ -15,3 +15,20 @@ body{
 .bg{
     background: top left no-repeat url(../images/bg.jpg);
 }
+.bgWhite{
+    background-color: rgba(255, 255, 255, 0.30);
+}
+.text14 *{
+    font-size: 14px;
+}
+.textGrey{
+    color: #777777;
+}
+.textRed{
+    color: #da0707;
+}
+.input30{
+    width: 30%;
+    margin: auto;
+}
+
