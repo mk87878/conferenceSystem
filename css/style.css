@@ -1,0 +1,17 @@
+*{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+a{
+    /*text-decoration: none;*/
+    color: #000000;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    background: top left no-repeat url(../images/bg.jpg);
+}
