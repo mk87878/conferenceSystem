@@ -19,28 +19,21 @@
 
 </head>
 
-<?php
-/**
- * Created by PhpStorm.
- * User: zhangmingwen
- * Date: 15/12/18
- * Time: 13:30
- */
-include_once 'config/config.php';
-
-?>
 
 <body class="bg">
 <div class="container">
-    <form class="form-login">
+    <form class="form-login" action="config/login.php" method="post">
         <h2 class="form-login-heading">Please login</h2>
 
         <input type="text" id="inputUserName" name="userName" class="form-control" placeholder="userName" required autofocus>
 
         <input type="password" name="passWord" id="inputPassword" class="form-control" placeholder="Password" required>
 
-        <button class="btn btn-lg btn-success btn-block" type="submit">login</button>
+        <button class="btn btn-lg btn-success btn-block" type="submit" name="submit">login</button>
+
+        <a href="register.php">join us! register a new user!</a>
     </form>
+
 
 </div>
 </body>
