@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,20 @@
     <!--<link rel="stylesheet" href="css/style.css">-->
     <link rel="stylesheet" href="css/login.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+
 </head>
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: zhangmingwen
+ * Date: 15/12/18
+ * Time: 13:30
+ */
+include_once 'config/config.php';
+
+?>
+
 <body class="bg">
 <div class="container">
     <form class="form-login">

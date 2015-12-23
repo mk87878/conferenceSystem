@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +24,8 @@
  * Date: 15/12/18
  * Time: 13:30
  */
+include_once 'config/config.php';
+
 ?>
 <body class="bg">
 <div class="container">
@@ -52,7 +55,7 @@
             <div class="col-sm-4 inputTips textRed">*</div>
         </div>
         <!------------------->
-        <button class="btn  btn-primary btn-block input30" type="submit">Login</button>
+        <button class="btn  btn-primary btn-block input30" type="submit">Register</button>
     </form>
 </div>
 </body>
