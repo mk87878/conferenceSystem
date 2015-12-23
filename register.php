@@ -25,17 +25,26 @@
  * Time: 13:30
  */
 include_once 'config/config.php';
+//安全检测获取数据,避免notice提示信息
+$userName = isset($_POST['userName']) ? $_POST['userName']:'';
+$passWord = isset($_POST['passWord']) ? md5($_POST['passWord']):'';
+$email = isset($_POST['email']) ? $_POST['email']:'';
+$sectionId = isset($_POST['sectionId']) ? $_POST['sectionId']:'';
 
-//当有表单点击register时执行
+//当有表单点击register时执行,用于注册用户使用
 if(isset($_POST['register'])){
-    $userName = $_POST['userName'];
-    $passWord = md5($_POST['passWord']);
-    $email = $_POST['email'];
-    $sectionId = $_POST['sectionId'];
     //检测用户名是否已经被注册
     include_once 'plugin/nameCheck.php';
     //向数据库插入新用户数据
     include_once 'plugin/register.php';
+}
+
+//当有表单点击edit时执行,用于用户修改个人资料使用
+if(isset($_POST['edit'])){
+    include_once 'plugin/loginCheck.php';
+    $id = $_GET['id'];
+    //修改用户信息
+    include_once 'plugin/userEdit.php';
 }
 
 
@@ -81,6 +90,7 @@ if(isset($_POST['register'])){
         </div>
         <!------------------->
         <button class="btn  btn-primary btn-block input30" type="submit" name="register">Register</button>
+
     </form>
 </div>
 </body>
