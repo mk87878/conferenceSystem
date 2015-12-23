@@ -36,6 +36,7 @@ if(isset($_POST['register'])){
     include_once 'plugin/nameCheck.php';
     //向数据库插入新用户数据
     include_once 'plugin/register.php';
+
 }
 
 
@@ -74,7 +75,7 @@ if(isset($_POST['register'])){
             <label for="email"  class="col-sm-4  control-label">*部门</label>
             <div class="col-sm-4">
                 <select name="sectionId" class="form-control input-sm">
-                    <option value="1">Manager</option>
+                    <?php include_once 'plugin/sectionShow.php'; ?>
                 </select>
             </div>
             <div class="col-sm-4 inputTips textRed">*</div>

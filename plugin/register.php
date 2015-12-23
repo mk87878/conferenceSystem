@@ -4,6 +4,8 @@
  * User: zhangmingwen
  * Date: 15/12/23
  * Time: 14:29
+ *
+ * 注册新用户
  */
 $registerSql = "INSERT INTO user (userName,passWord,email,sectionId) VALUES ('$userName','$passWord','$email','$sectionId')";
 $registerRe = $db -> query($registerSql);

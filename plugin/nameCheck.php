@@ -4,6 +4,8 @@
  * User: zhangmingwen
  * Date: 15/12/23
  * Time: 13:48
+ *
+ * 用户名检测
  */
 //查询用户名是否被占用
 $checkSql = "SELECT * FROM user WHERE userName = '$userName'";

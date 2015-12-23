@@ -4,6 +4,8 @@
  * User: zhangmingwen
  * Date: 15/12/23
  * Time: 11:07
+ *
+ * 用户登录
  */
 include_once '../config/config.php';
 if(isset($_POST['submit'])){//判断是否有提交表单动作（是否需要登录）
