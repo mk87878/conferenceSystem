@@ -26,15 +26,30 @@
  */
 include_once 'config/config.php';
 
+//当有表单点击register时执行
+if(isset($_POST['register'])){
+    $userName = $_POST['userName'];
+    $passWord = md5($_POST['passWord']);
+    $email = $_POST['email'];
+    $sectionId = $_POST['sectionId'];
+    //检测用户名是否已经被注册
+    include_once 'plugin/nameCheck.php';
+    //向数据库插入新用户数据
+    include_once 'plugin/register.php';
+}
+
+
+
+
 ?>
 <body class="bg">
 <div class="container">
     <h2 class="text-center">come quick! join us!</h2>
-    <form action="" class="form-horizontal  col-sm-12">
+    <form method="post" class="form-horizontal  col-sm-12">
         <div class="form-group">
             <label for="text"  class="col-sm-4  control-label">*用户名</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control input-sm"  placeholder="UserName">
+                <input type="text" class="form-control input-sm"  placeholder="UserName" name="userName">
             </div>
             <div class="col-sm-4 inputTips textRed">*</div>
         </div>
@@ -42,7 +57,7 @@ include_once 'config/config.php';
         <div class="form-group">
             <label for="text"  class="col-sm-4 control-label">*密码</label>
             <div class="col-sm-4">
-                <input type="password" class="form-control input-sm"  placeholder="password">
+                <input type="password" class="form-control input-sm"  placeholder="password" name="passWord">
             </div>
             <div class="col-sm-4 inputTips textRed">*</div>
         </div>
@@ -50,12 +65,22 @@ include_once 'config/config.php';
         <div class="form-group">
             <label for="email"  class="col-sm-4  control-label">*邮箱</label>
             <div class="col-sm-4">
-                <input type="email" class="form-control input-sm"  placeholder="email">
+                <input type="email" class="form-control input-sm"  placeholder="email" name="email">
             </div>
             <div class="col-sm-4 inputTips textRed">*</div>
         </div>
         <!------------------->
-        <button class="btn  btn-primary btn-block input30" type="submit">Register</button>
+        <div class="form-group">
+            <label for="email"  class="col-sm-4  control-label">*部门</label>
+            <div class="col-sm-4">
+                <select name="sectionId" class="form-control input-sm">
+                    <option value="1">Manager</option>
+                </select>
+            </div>
+            <div class="col-sm-4 inputTips textRed">*</div>
+        </div>
+        <!------------------->
+        <button class="btn  btn-primary btn-block input30" type="submit" name="register">Register</button>
     </form>
 </div>
 </body>

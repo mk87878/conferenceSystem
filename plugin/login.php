@@ -5,7 +5,7 @@
  * Date: 15/12/23
  * Time: 11:07
  */
-include_once 'config.php';
+include_once '../config/config.php';
 if(isset($_POST['submit'])){//判断是否有提交表单动作（是否需要登录）
     $userName = $_POST['userName'];
     $passWord = md5($_POST['passWord']);
@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){//判断是否有提交表单动作（是否需要�
         $_SESSION['userName'] = $loginInfo['userName'];//登录用户名存入session
         $_SESSION['userId'] = $loginInfo['id'];//登录用户id存入session
 
-        echo "<script>alert('Login success. Welcome to here!');location.href='../register.php';</script>";
+        echo "<script>alert('Login success. Welcome to here!');location.href='../index.html';</script>";
     }
 }
 

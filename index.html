@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +21,7 @@
 
 <body class="bg">
 <div class="container">
-    <form class="form-login" action="config/login.php" method="post">
+    <form class="form-login" action="plugin/login.php" method="post">
         <h2 class="form-login-heading">Please login</h2>
 
         <input type="text" id="inputUserName" name="userName" class="form-control" placeholder="userName" required autofocus>
@@ -31,7 +30,7 @@
 
         <button class="btn btn-lg btn-success btn-block" type="submit" name="submit">login</button>
 
-        <a href="register.php">join us! register a new user!</a>
+        <a href="register.php" class="paddingT  text-primary glyphicon glyphicon-triangle-right">Register</a>
     </form>
 
 
