@@ -7,7 +7,8 @@
  *
  * 列表option项
  */
-include_once 'sectionShow.php';
+$sectionSql = "SELECT * FROM section";
+$sectionRe = $db -> query($sectionSql);
 while($sectionInfo = $sectionRe -> fetch()) {
     echo "<option value ='";
     echo $sectionInfo['id'];

@@ -36,7 +36,6 @@ if(isset($_POST['register'])){
     include_once 'plugin/nameCheck.php';
     //向数据库插入新用户数据
     include_once 'plugin/register.php';
-
 }
 
 
