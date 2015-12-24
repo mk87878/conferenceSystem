@@ -11,7 +11,7 @@
 <body>
 <div id="topBox"><div id="logo"><img src="../images/adminLogo.png" width="566" height="48" /></div>
   <div id="logoText">
-    <div id="user">Welcome ：<a href="#"  target="_parent"><?php echo $_SESSION['userName'];?></a> </div>
+    <div id="user">Welcome ：<a href="../register.php?userId=<?php echo $_SESSION['userId'];?>"  target="_parent"><?php echo $_SESSION['userName'];?></a> </div>
     <ul>
       <li><a href="../register.php" target="_parent">Register</a></li>
       <li style="border:none"> <a href="../plugin/logout.php" target="_parent">log out</a></li>

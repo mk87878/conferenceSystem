@@ -30,6 +30,13 @@ $userName = isset($_POST['userName']) ? $_POST['userName']:'';
 $passWord = isset($_POST['passWord']) ? md5($_POST['passWord']):'';
 $email = isset($_POST['email']) ? $_POST['email']:'';
 $sectionId = isset($_POST['sectionId']) ? $_POST['sectionId']:'';
+//修改资料时使用的值
+$id = isset($_GET['userId']) ? $_GET['userId']:'';
+if(!empty($id)){
+    $userSql = "SELECT * FROM user WHERE id = '$id' ";
+    $userRe = $db -> query($userSql);
+    $userInfo = $userRe -> fetch();
+}
 
 //当有表单点击register时执行,用于注册用户使用
 if(isset($_POST['register'])){
@@ -42,7 +49,7 @@ if(isset($_POST['register'])){
 //当有表单点击edit时执行,用于用户修改个人资料使用
 if(isset($_POST['edit'])){
     include_once 'plugin/loginCheck.php';
-    $id = $_GET['id'];
+    $userId = $_POST['userId'];
     //修改用户信息
     include_once 'plugin/userEdit.php';
 }
@@ -53,12 +60,16 @@ if(isset($_POST['edit'])){
 ?>
 <body class="bg">
 <div class="container">
-    <h2 class="text-center">come quick! join us!</h2>
+    <?php if(empty($id)){
+        echo "<h2 class='text-center'>come quick! join us!</h2>";
+    }else{
+        echo "<h2 class='text-center'>My Profile <small><a href='control.php' class='btn-sm btn-danger'> back</a></small></h2>";
+    } ?>
     <form method="post" class="form-horizontal  col-sm-12">
         <div class="form-group">
             <label for="text"  class="col-sm-4  control-label">*用户名</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control input-sm"  placeholder="UserName" name="userName">
+                <input type="text" class="form-control input-sm"  placeholder="UserName" name="userName" value="<?php if(!empty($id)){echo $userInfo['userName'];} ?>">
             </div>
             <div class="col-sm-4 inputTips textRed">*</div>
         </div>
@@ -74,7 +85,7 @@ if(isset($_POST['edit'])){
         <div class="form-group">
             <label for="email"  class="col-sm-4  control-label">*邮箱</label>
             <div class="col-sm-4">
-                <input type="email" class="form-control input-sm"  placeholder="email" name="email">
+                <input type="email" class="form-control input-sm"  placeholder="email" name="email" value="<?php if(!empty($id)){echo $userInfo['email'];} ?>">
             </div>
             <div class="col-sm-4 inputTips textRed">*</div>
         </div>
@@ -89,7 +100,16 @@ if(isset($_POST['edit'])){
             <div class="col-sm-4 inputTips textRed">*</div>
         </div>
         <!------------------->
-        <button class="btn  btn-primary btn-block input30" type="submit" name="register">Register</button>
+
+        <?php
+        //如果get到userId,就显示修改信息,未检测到就显示注册
+        if(empty($id)){
+            echo "<button class='btn  btn-primary btn-block input30' type='submit' name='register'>Register</button>";
+        }else{
+            echo "<button class='btn  btn-success btn-block input30' type='submit' name='edit'>Edit</button>";
+            echo "<input type='hidden' name='userId' value='$id'>";
+        }
+        ?>
 
     </form>
 </div>
