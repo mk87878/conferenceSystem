@@ -1,0 +1,29 @@
+@charset "UTF-8";
+*,body{
+	font-family: "Microsoft YaHei";
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+ul,dl,dd,dt{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+img {
+	border:none;
+
+}
+a {
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+.submit_button {
+	background-color: #E15360;
+	color: #FFF;
+	text-align: center;
+	width: 120px;
+	border: none;
+	line-height: 25px;
+}

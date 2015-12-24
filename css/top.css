@@ -1,0 +1,37 @@
+@charset "UTF-8";
+#topBox {
+	width: 100%;
+	height: auto;
+	-moz-box-shadow: 0 2px 1px #d3d3d3;
+	box-shadow: 0 2px 1px #d3d3d3;
+}
+topline { width: 100%; height: 0; display: block; clear: both; float: none; border-top-width: 12px; border-bottom-width: 5px; border-top-style: solid; border-bottom-style: solid; border-top-color: #56AF68; border-bottom-color: #3B7C4B; }
+#logo {
+	height: 48px;
+	width: 566px;
+	float: left;
+	margin: 10px 0;
+}
+#logoText {
+	float: right;
+	height: 20px;
+	width: 400px;
+	margin: 38px 30px 10px 0;
+}
+#logoText ul {
+	float: right;
+}
+#logoText ul li {
+	float: left;
+	border-right: 1px solid #880303;
+	width: 55px;
+	margin-top: 0;
+	margin-right: 5px;
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+#user {
+	width: auto;
+	float: left;
+}
+#user a { color: #3B7C4B; }

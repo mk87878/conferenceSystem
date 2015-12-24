@@ -1,0 +1,37 @@
+@charset "UTF-8";
+#listBox { width: 98%; height: auto; padding: 3px; border: 1px solid#006600; -moz-box-shadow: 2px 2px 2px rgba(195, 193, 193, 0.84); box-shadow: 2px 2px 2px rgba(195, 193, 193, 0.84); }
+#title { line-height: 32px; height: 32px; width: 98%; margin: 0 auto; border-bottom: 1px solid#006600; border-left: 10px solid #006600; }
+#title li  {
+	float: left;
+	margin: 0 7px;
+
+}
+#listBox #title ul li a {
+	font-size: 16px;
+}
+#title li span a { color: #009900; }
+
+#content {
+	width: 98%;
+	height: 420px;
+	padding: 5px;
+	clear: both;
+	float: none;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+}
+#content dt{
+	color: #ffffff;
+	background-color: #ff3366;
+	font-size: 15px;
+	line-height: 32px;
+	display: block;
+	padding-left: 1%;
+}
+
+#contact { width: 98%; height: 40px; border-top: 1px dotted #006600; color: #006600; clear: both; float: none; margin-top: 15px; margin-right: auto; margin-bottom: 15px; margin-left: auto; }
+#contact ul {
+	padding-left: 1%;
+}

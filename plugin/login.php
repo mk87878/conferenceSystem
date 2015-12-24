@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: zhangmingwen
@@ -20,7 +21,7 @@ if(isset($_POST['submit'])){//判断是否有提交表单动作（是否需要�
         $_SESSION['userName'] = $loginInfo['userName'];//登录用户名存入session
         $_SESSION['userId'] = $loginInfo['id'];//登录用户id存入session
 
-        echo "<script>alert('Login success. Welcome to here!');location.href='./index.html';</script>";
+        echo "<script>alert('Login success. Welcome to here!');location.href='../control.php';</script>";
     }
 }
 
