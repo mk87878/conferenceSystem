@@ -13,7 +13,7 @@
     color: white;
 }
 .listItem{
-    line-height: 32px;
+    line-height: 35px;
 }
 .listItem:hover{
     background-color: rgba(29, 192, 37, 0.15);

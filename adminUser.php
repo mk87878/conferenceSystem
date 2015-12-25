@@ -92,15 +92,24 @@ if(isset($_GET['del'])) {
         <div class="col-xs-2"><?php echo $info['email'] ?></div>
         <div class="col-xs-1"><?php echo $info['section'] ?></div>
         <div class="col-xs-2">
+          <?php if($info['admin'] != 1){?>
           <a class="btn-sm btn-success rePassword"
              href="adminUser.php?rePw=1&userId=<?php echo $info['id'] ?>">
             &nbsp;Reset&nbsp;
           </a>
+          <?php }else{
+            echo "<span>root</span>";
+          }  ?>
         </div>
         <div class="col-xs-1"><?php echo $info['admin'] ?></div>
         <div class="col-xs-1"><?php echo $info['block'] ?></div>
         <div class="col-xs-2">
-          <a class="btn-sm btn-danger del" href="adminUser.php?del=1&userId=<?php echo $info['id'] ?>">Del</a>
+          <?php if($info['admin'] != 1){?>
+            <a  class="btn-sm btn-danger del" href="adminUser.php?del=1&userId=<?php echo $info['id'] ?>" >Del</a>
+          <?php }else{
+            echo "<span>root</span>";
+          }  ?>
+
         </div>
       </div>
       <?php
