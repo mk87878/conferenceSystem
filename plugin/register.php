@@ -13,7 +13,7 @@ $registerRe = $db -> query($registerSql);
 $registerCount = $registerRe -> rowCount();
 
 if($registerCount){
-    echo "<script>alert('registered success.');</script>";
+    echo "<script>alert('registered success.');location.href='./index.html';</script>";
 }else{
     echo "<script>alert('registered failed.');history.back();</script>";
 }

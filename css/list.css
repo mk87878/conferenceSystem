@@ -1,0 +1,20 @@
+.listBg{
+    background-color: #f7f7f7;
+    border: #229159 solid 1px;
+}
+.contentHig{
+    height: 430px;
+}
+.title{
+    line-height: 35px;
+    font-size: 20px;
+    /*font-weight: bold;*/
+    background-color: #229159;
+    color: white;
+}
+.listItem{
+    line-height: 32px;
+}
+.listItem:hover{
+    background-color: rgba(29, 192, 37, 0.15);
+}

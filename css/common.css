@@ -1,9 +1,9 @@
 @charset "UTF-8";
 *,body{
-	font-family: "Microsoft YaHei";
-	margin: 0px;
-	padding: 0px;
-	font-size: 12px;
+	font-family: Arial,Menlo,monospace,"Courier New", Courier;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
 }
 ul,dl,dd,dt{
 	list-style-type: none;

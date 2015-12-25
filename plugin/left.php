@@ -3,9 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>list</title>
-<link href="../css/left.css" rel="stylesheet" type="text/css" />
-<link href="../css/common.css" rel="stylesheet" type="text/css" />
-</head></head>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <!--其他引入项目-->
+    <link href="../css/left.css" rel="stylesheet" type="text/css" />
+    <link href="../css/common.css" rel="stylesheet" type="text/css" />
+</head>
 <body>
 
 <div class="container">
@@ -21,9 +28,14 @@
       <dd class="first_dd"><a href="../sys.php"  target="main">· 网站设置</a></dd>
       <dd class="first_dd"><a href="../control.php" target="main">· 管理员设置</a></dd>
     </dl>
+      <dl>
+          <dt>· adminUser</dt>
+          <dd class="first_dd"><a href="../adminUser.php"  target="main" data-toggle="tooltip" data-placement="bottom" data-original-title="用户资料管理">· userInfo</a></dd>
+
+      </dl>
   </div>
 </div>
-<script src="../js/jquery-1.11.0.min.js"></script>
+
 <script>
 $(function(){
 	$(".leftsidebar_box dt").css({"background-color":"#009900"});
@@ -37,6 +49,8 @@ $(function(){
 	});
 })
 </script> 
+<!--存放所有公共js(大杂烩)-->
+<script src="../bootstrap-3.3.5-dist/js/common.js"></script>
 
 </body>
 </html>
