@@ -26,9 +26,10 @@ $userId = isset($_SESSION['userId']) ? $_SESSION['userId']:'';
 $admin = isset($_SESSION['admin']) ? $_SESSION['admin']:'';
 //检查是否为管理员
 include_once 'plugin/admin.php';
-
-$sql = "SELECT user.*,section.section FROM user,section WHERE user.id = section.id";
+//查询数据库用户信息
+$sql = "SELECT user.*,section.section FROM user,section WHERE user.sectionId = section.id";
 $re = $db -> query($sql);
+$url = $_SERVER['PHP_SELF'];
 
 //重置密码为abc123
 if(isset($_GET['rePw'])) {
@@ -37,9 +38,12 @@ if(isset($_GET['rePw'])) {
   $rePwSql = "UPDATE user SET passWord = '$passWord' WHERE id = '$userId' ";
   $rePwRe = $db->exec($rePwSql);
   if ($rePwRe) {
-    echo "<script>alert('Password reset  success.');location.href='adminUser.php';</script>";
+    echo "<meta http-equiv=refresh content='0; url = ".$url."'>";
+    echo "<script>alert('Password reset  success.');</script>";
+
   } else {
-    echo "<script>alert('Password reset failed.');location.href='adminUser.php';</script>";
+    echo "<meta http-equiv=refresh content='0; url = ".$url."'>";
+    echo "<script>alert('Password reset failed.');</script>";
   }
 }
 //删除用户
@@ -48,9 +52,8 @@ if(isset($_GET['del'])) {
   $delSql = "DELETE FROM user  WHERE id = '$userId' ";
   $delRe = $db->exec($delSql);
   if ($delRe) {
-    echo "<script>alert('Delete  success.');location.href='adminUser.php';</script>";
-  } else {
-    echo "<script>alert('Delete  failed.');location.href='adminUser.php';</script>";
+    echo "<meta http-equiv=refresh content='0; url = ".$url."'>";
+//    echo "<script>location.href='adminUser.php';alert('Delete  success.');</script>";
   }
 }
 ?>
