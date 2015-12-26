@@ -32,6 +32,7 @@ a {
 .leftsidebar_box dt { color: #FFFFFF; font-size: 14px; position: relative; line-height: 32px; cursor: pointer; padding: 0 10px 0 30px; margin: 7px 0 0; background-color: #009900; background-position: 10px center; border-left: 1px solid #006600; border-bottom: 1px solid #006600 font-weight: bold; }
 .leftsidebar_box dd { padding-left: 30px; color: #009900; display: block; border-left: 1px solid #006600; border-bottom: 1px solid #006600; margin-left: 30px; }
 .leftsidebar_box dd a { color: #006600; line-height: 27px; font-size: 13px; }
+.leftsidebar_box dd a span { color: #006600; line-height: 27px; font-size: 13px; }
 .leftsidebar_box dl dd:last-child {
 	margin-bottom: 10px;
 }

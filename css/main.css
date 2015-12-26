@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#listBox { width: 98%; height: auto; padding: 3px; border: 1px solid#006600; -moz-box-shadow: 2px 2px 2px rgba(195, 193, 193, 0.84); box-shadow: 2px 2px 2px rgba(195, 193, 193, 0.84); }
+#listBox { width: 98%; height: auto; padding: 3px; margin-left: 3px; border: 1px solid#006600; -moz-box-shadow: 2px 2px 2px rgba(195, 193, 193, 0.84); box-shadow: 2px 2px 2px rgba(195, 193, 193, 0.84); }
 #title { line-height: 32px; height: 32px; width: 98%; margin: 0 auto; border-bottom: 1px solid#006600; border-left: 10px solid #006600; }
 #title li  {
 	float: left;

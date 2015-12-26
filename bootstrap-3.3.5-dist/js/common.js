@@ -36,7 +36,7 @@ $(function(){
         placement:'top'
     });
     $('.section').tooltip({
-        title:"所属部门",
+        title:"部门",
         placement:'top'
     });
     $('.password').tooltip({
@@ -59,6 +59,10 @@ $(function(){
         title:"删除",
         placement:'right'
     });
+    $('.edit').tooltip({
+        title:"编辑",
+        placement:'left'
+    });
     $('.newUer').tooltip({
         title:"增加新用户",
         placement:'left'
@@ -67,6 +71,15 @@ $(function(){
         title:"禁止修改",
         placement:'right'
     });
+    $('.details').tooltip({
+        title:"详情",
+        placement:'top'
+    });
+    $('.newSection').tooltip({
+        title:"增加新部门",
+        placement:'left'
+    });
+
 
 
 

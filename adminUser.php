@@ -84,7 +84,6 @@ if(isset($_GET['del'])) {
       //列表显示用户信息
       $i = 1;
       while ($info = $re -> fetch()) {
-
       ?>
       <div class="row text-center listItem">
         <div class="col-xs-1"><?php echo $i; ?></div>
