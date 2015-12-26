@@ -63,6 +63,10 @@ $(function(){
         title:"增加新用户",
         placement:'left'
     });
+    $('.root').tooltip({
+        title:"禁止修改",
+        placement:'right'
+    });
 
 
 

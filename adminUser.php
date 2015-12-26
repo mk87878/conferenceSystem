@@ -98,16 +98,16 @@ if(isset($_GET['del'])) {
             &nbsp;Reset&nbsp;
           </a>
           <?php }else{
-            echo "<span>root</span>";
+            echo "<span class='text-danger root'>root</span>";
           }  ?>
         </div>
-        <div class="col-xs-1"><?php echo $info['admin'] ?></div>
-        <div class="col-xs-1"><?php echo $info['block'] ?></div>
+        <div class="col-xs-1"><?php echo $info['admin'] ? 'YES':'NO'; ?></div>
+        <div class="col-xs-1"><?php echo $info['block'] ? 'YES':'NO'; ?></div>
         <div class="col-xs-2">
           <?php if($info['admin'] != 1){?>
             <a  class="btn-sm btn-danger del" href="adminUser.php?del=1&userId=<?php echo $info['id'] ?>" >Del</a>
           <?php }else{
-            echo "<span>root</span>";
+            echo "<span class=' text-danger root'>root</span>";
           }  ?>
 
         </div>
