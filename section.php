@@ -69,7 +69,7 @@ if(isset($_GET['del'])) {
         <div class="col-xs-2 text-center"><?php echo $info['section']; ?></div>
         <div class="col-xs-7 "><?php echo $info['sectionDetails']; ?></div>
         <div class="col-xs-2 text-center">
-          <a class="btn-sm btn-success edit" href="section.php?edit=1&id=<?php echo $info['id'] ?>" >Edit</a>
+          <a class="btn-sm btn-success edit"  href="section.php?edit=1&id=<?php echo $info['id'] ?>" >Edit</a>
           <a class="btn-sm btn-danger del" href="section.php?del=1&id=<?php echo $info['id'] ?>" >Del</a>
         </div>
       </div>
@@ -77,7 +77,9 @@ if(isset($_GET['del'])) {
       $i++;
       }
       ?>
-    </div>
+
+
+  </div>
   </div>
 
   <div id="contact">
