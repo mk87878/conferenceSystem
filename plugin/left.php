@@ -17,24 +17,21 @@
 
 <div class="container">
   <div class="leftsidebar_box">
-<DIV class="title">· 栏&nbsp;&nbsp;目</DIV>
+<DIV class="title">· Control</DIV>
     <dl>
-      <dt>· 菜单管理</dt>
-      <dd class="first_dd"><a href=""  target="main">· 书籍</a></dd>
-
-    </dl>
-    <dl>
-      <dt>· 系统设置</dt>
-      <dd class="first_dd"><a href=""  target="main">· 网站设置</a></dd>
-      <dd class="first_dd"><a href="" target="main">· 管理员设置</a></dd>
+      <dt>· Conference</dt>
+      <dd class="first_dd"><a href=""  target="main">· Conference</a></dd>
     </dl>
       <dl>
-          <dt>· adminUser</dt>
+          <dt>· adminControl</dt>
           <dd class="first_dd"><a href="../adminUser.php"  target="main" >·
                   <span data-toggle="tooltip" data-placement="left" data-original-title="用户资料">UserInfo</span>
               </a></dd>
           <dd class="first_dd"><a href="../section.php"  target="main" >·
                   <span data-toggle="tooltip" data-placement="left" data-original-title="部门信息">Section</span>
+              </a></dd>
+          <dd class="first_dd"><a href="../conference.php"  target="main" >·
+                  <span data-toggle="tooltip" data-placement="left" data-original-title="会议信息">Conference</span>
               </a></dd>
 
       </dl>

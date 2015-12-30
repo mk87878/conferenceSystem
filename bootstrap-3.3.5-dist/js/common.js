@@ -28,7 +28,7 @@ $(function(){
         placement:'top'
     });
     $('.name').tooltip({
-        title:"用户名",
+        title:"名称",
         placement:'top'
     });
     $('.email').tooltip({
@@ -77,6 +77,30 @@ $(function(){
     });
     $('.newSection').tooltip({
         title:"增加新部门",
+        placement:'left'
+    });
+    $('.location').tooltip({
+        title:"地点",
+        placement:'top'
+    });
+    $('.time').tooltip({
+        title:"时间",
+        placement:'top'
+    });
+    $('.participant').tooltip({
+        title:"参与者",
+        placement:'top'
+    });
+    $('.compere').tooltip({
+        title:"主持人",
+        placement:'top'
+    });
+    $('.scorer').tooltip({
+        title:"记录员",
+        placement:'top'
+    });
+    $('.newRecord').tooltip({
+        title:"增加新会议记录",
         placement:'left'
     });
 
