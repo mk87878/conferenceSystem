@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>list</title>
   <!-- 新 Bootstrap 核心 CSS 文件 -->
-  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
   <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
   <script src="js/jquery-1.11.3.min.js"></script>
   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
@@ -46,7 +46,35 @@ if(isset($_GET['del'])) {
   <div id="title">
     <ul>
       <li><span><a href="#">Section Setting</a></span></li>
-      <a style="color: red" class=" glyphicon-plus pull-right newSection" href="register.php" target="_parent">add New Section</a>
+      <a style="color: red" class=" glyphicon-plus pull-right newSection" data-toggle="modal" data-target="#Modal">Add New Section</a>
+      <!--        弹出add模态框 start-->
+      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" >
+          <form action="plugin/sectionEdit.php" method="post">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Add New Section</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Section:</label>
+                  <input type="text" class="form-control" id="recipient-name"  name="section">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">Detail:</label>
+                  <textarea class="form-control" id="message-text" name="sectionDetails"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" name="sectionAdd" class="btn btn-success">Confirm</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--        弹出add模态框 end-->
 
     </ul>
     </div>
@@ -69,10 +97,40 @@ if(isset($_GET['del'])) {
         <div class="col-xs-2 text-center"><?php echo $info['section']; ?></div>
         <div class="col-xs-7 "><?php echo $info['sectionDetails']; ?></div>
         <div class="col-xs-2 text-center">
-          <a class="btn-sm btn-success edit"  href="section.php?edit=1&id=<?php echo $info['id'] ?>" >Edit</a>
+          <a class="btn-sm btn-success edit" data-toggle="modal" data-target="#Modal-<?php echo $i; ?>" >Edit</a>
           <a class="btn-sm btn-danger del" href="section.php?del=1&id=<?php echo $info['id'] ?>" >Del</a>
         </div>
       </div>
+<!--        弹出修改模态框 start-->
+        <div class="modal fade" id="Modal-<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog" >
+            <form action="plugin/sectionEdit.php" method="post">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Modify</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Section:</label>
+                  <input type="text" class="form-control" id="recipient-name" value="<?php echo $info['section']; ?>" name="section">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">Detail:</label>
+                  <textarea class="form-control" id="message-text" name="sectionDetails"><?php echo $info['sectionDetails']; ?></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" name="sectionEdit" class="btn btn-success">Confirm</button>
+                <input type="hidden" value="<?php echo $info['id']; ?>" name="SectionId">
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+<!--        弹出修改模态框 end-->
+
       <?php
       $i++;
       }
@@ -89,6 +147,7 @@ if(isset($_GET['del'])) {
     </ul>
 </div>
 </div>
+
 
 
 <!--存放所有公共js(大杂烩)-->
