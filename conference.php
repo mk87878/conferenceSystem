@@ -41,7 +41,7 @@ $url = $_SERVER['PHP_SELF'];
       <li><span><a href="#">Conference Record</a></span></li>
     
     </ul>
-    <a style="color: red" class="glyphicon-plus pull-right newRecord" href="#" >add New Conference Record</a>
+    <a style="color: red" class="glyphicon-plus pull-right newRecord" href="addRecord.php" >add New Conference Record</a>
     </div>
   <div id="content">
     <div class="container-fluid listBg contentHig">
