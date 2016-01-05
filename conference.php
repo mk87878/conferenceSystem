@@ -14,6 +14,9 @@ session_start();
   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
   <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
   <!--其他引入项目-->
+  <!--  打印预览-->
+  <script language="javascript" src="js/jquery.PrintArea.js"></script>
+  <!--  打印预览-->
   <link href="css/main.css" rel="stylesheet" type="text/css" />
   <link href="css/common.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="css/list.css">
@@ -86,51 +89,60 @@ $url = $_SERVER['PHP_SELF'];
               </div>
               <div class="modal-body">
 <!--                modal content-->
-                <div class="container-fluid">
+                <div class="container-fluid openHeight">
                   <div class="row">
-                    <div class=" col-xs-1 section">Section</div>
+                    <div class="col-xs-1 text-right openTitle section">Section:</div>
                     <div class="col-xs-3"><?php echo $info['section']; ?></div>
-                    <div class="col-xs-offset-1 col-xs-1 location">Location</div>
+                    <div class="col-xs-offset-1 col-xs-1 text-right openTitle location">Location:</div>
                     <div class="col-xs-3"><?php echo $info['location']; ?></div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-offset-1 col-xs-1 compere">Compere</div>
+                    <div class="col-xs-1 text-right openTitle compere">Compere:</div>
                     <div class="col-xs-3"><?php echo $info['compere']; ?></div>
-                    <div class="col-xs-1 time">Time</div>
+                    <div class="col-xs-offset-1 col-xs-1 text-right openTitle time">Time:</div>
                     <div class="col-xs-3"><?php echo $info['time']; ?></div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-1 participant">Participant</div>
+                    <div class="col-xs-1 text-right openTitle participant">Participant:</div>
                     <div class="col-xs-3"><?php echo $info['participant']; ?></div>
-                    <div class="col-xs-offset-1 col-xs-1 scorer">Scorer</div>
+                    <div class="col-xs-offset-1 col-xs-1 text-right openTitle scorer">Scorer:</div>
                     <div class="col-xs-3"><?php echo $info['scorer']; ?></div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-1 summary">Summary</div>
+                    <div class="col-xs-1 openTitle summary">Summary:</div>
                     <div class="col-xs-10"><?php echo $info['summary']; ?></div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">Conference Details</div>
-                  <div class="col-xs-12">
-                    <?php
-                    $details = "upload/".$info['conferenceDetails'];
-                    $myFile = fopen($details, "r") or die("Unable to open file!");
+                  <div class="row">
+                    <div class="col-xs-12 openTitle">Conference Details:</div>
+                    <div class="col-xs-12">
+                      <?php
+                      $details = "upload/".$info['conferenceDetails'];
+                      $myFile = fopen($details, "r") or die("Unable to open file!");
 
-                    echo fread($myFile,filesize($details));
-//                    fclose($myFile);
-                    ?>
+                      echo fread($myFile,filesize($details));
+                      //                    fclose($myFile);
+                      ?>
+                    </div>
                   </div>
                 </div>
 <!--                modal content-->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" id="print">打印</button>
               </div>
             </div>
           </div>
         </div>
+        <script language="javascript">
+          $(document).ready(function(){
+            $("#print").click(function(){
+              $("#Modal-<?php echo $i; ?>").printArea({
+                mode:'popup'
+            });
+            });
+          });
+        </script>
         <!-- Large modal -->
         <?php
         $i++;

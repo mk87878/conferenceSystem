@@ -27,3 +27,11 @@ a {
 	border: none;
 	line-height: 25px;
 }
+.openTitle{
+	font-weight: bold;
+	/*line-height:25px;*/
+	color: #8c0606;
+}
+.openHeight{
+	line-height:37px;
+}
