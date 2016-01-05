@@ -13,7 +13,7 @@
 
 #content {
 	width: 98%;
-	height: 430px;
+	height: 440px;
 	padding: 0px;
 	clear: both;
 	float: none;
@@ -28,7 +28,7 @@
 	padding-left: 1%;
 }
 
-#contact { width: 98%; height: 40px; border-top: 1px dotted #006600; color: #006600; clear: both; float: none; margin-top: 15px; margin-right: auto; margin-bottom: 15px; margin-left: auto; }
+#contact { width: 98%; height: 40px; border-top: 1px dotted #006600; color: #006600; clear: both; float: none; margin-top: 10px; margin-right: auto; margin-bottom: 10px; margin-left: auto; }
 #contact ul {
 	padding-left: 1%;
 }

@@ -135,6 +135,7 @@ $url = $_SERVER['PHP_SELF'];
           </div>
         </div>
         <script language="javascript">
+          //打印预览
           $(document).ready(function(){
             $("#print").click(function(){
               $("#Modal-<?php echo $i; ?>").printArea({

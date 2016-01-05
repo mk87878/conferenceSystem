@@ -13,7 +13,6 @@
   <!--其他引入项目-->
   <link href="css/main.css" rel="stylesheet" type="text/css" />
   <link href="css/common.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <?php
@@ -115,8 +114,8 @@ if(isset($_POST['submit'])){
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label"></label>
-          <div class="col-xs-2">
-            <button type="submit" name="submit" class="btn btn-xs btn-success col-xs-12">Add</button>
+          <div class="col-xs-5">
+            <button type="submit" name="submit" class="btn btn-sm btn-success col-xs-12">Add</button>
           </div>
         </div>
 
