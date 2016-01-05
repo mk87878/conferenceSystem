@@ -1,0 +1,21 @@
+显示：defaults write com.apple.finder AppleShowAllFiles -bool true
+隐藏：defaults write com.apple.finder AppleShowAllFiles -bool false 
+
+显示隐藏文件，需要重启finder
+
+显示Mac隐藏文件的命令：
+defaults write com.apple.finder AppleShowAllFiles YES
+
+隐藏Mac隐藏文件的命令：
+defaults write com.apple.finder AppleShowAllFiles NO
+
+mac os 隐藏文件夹的小技巧
+
+1. 打开终端
+2. 输入 “chflags hidden " (注意：不要引号，最后有个空格）
+3. 把文件夹拖入到终端里面 （注意：当然在第二步的时候可以在空格后面直接输入文件夹路径）
+4. 回车。。。
+
+重新显示
+
+把hidden改成nohidden就好了，后面加文件夹路径啦 （现在不好用拖入的方法了哦）

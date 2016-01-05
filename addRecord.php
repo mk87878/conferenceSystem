@@ -18,7 +18,24 @@
 
 <?php
 include_once 'config/config.php';
-include_once 'plugin/login.php';
+include_once 'plugin/loginCheck.php';
+$conferenceName =isset($_POST['conferenceName']) ? $_POST['conferenceName']:'';
+if(isset($_POST['submit'])){
+  include_once 'plugin/uploadFile.php';
+  $location = $_POST['location'];
+  $section = $_POST['section'];
+  $time = $_POST['time'];
+  $compere = $_POST['compere'];
+  $participant = $_POST['participant'];
+  $scorer = $_POST['scorer'];
+  $summary = $_POST['summary'];
+  $conferenceDetails = $uploadName;
+  $conSql = "INSERT INTO conference  (conferenceName,location,section,time,compere,participant,scorer,summary,conferenceDetails) VALUES ($conferenceName,'$location','$section','$time','$compere','$participant','$scorer','$summary','$conferenceDetails')";
+  $conRe = $db -> exec($conSql);
+  if($conRe){
+    echo "<script>location.href='conference.php';alert('add New Conference Record success!');</script>";
+  }
+}
 
 
 ?>
@@ -36,61 +53,67 @@ include_once 'plugin/login.php';
   <div id="content">
     <div class="container-fluid">
 <!--      内容 start-->
-      <form class="form-horizontal" method="post">
+      <form class="form-horizontal" method="post" enctype="multipart/form-data" >
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Conference Name</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="conferenceName">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Section</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="section" >
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Location</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="location">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Time</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="time">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Compere</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="compere">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Participant</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="participant">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Scorer</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" name="scorer">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Summary</label>
           <div class="col-xs-5">
-            <textarea class="form-control" rows="2"></textarea>
+            <textarea class="form-control" rows="2" name="summary"></textarea>
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Details</label>
           <div class="col-xs-2">
-            <input type="file" placeholder="only .txt file">
+            <input type="file" name="file" placeholder="only .txt file">
           </div>
           <div class="col-xs-3 text-danger">only '.txt' file</div>
+        </div>
+        <div class="form-group-sm form-group">
+          <label for="" class="col-xs-2 control-label"></label>
+          <div class="col-xs-2">
+            <button type="submit" name="submit" class="btn btn-xs btn-success col-xs-12">Add</button>
+          </div>
         </div>
 
       </form>

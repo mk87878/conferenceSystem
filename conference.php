@@ -71,6 +71,7 @@ $url = $_SERVER['PHP_SELF'];
         <div class="col-xs-2 participant"><?php echo $info['participant']; ?></div>
         <div class="col-xs-1 scorer"><?php echo $info['scorer']; ?></div>
         <div class="col-xs-2">
+          <a class="btn-sm btn-success edit" href="#">Open</a>
           <a class="btn-sm btn-primary edit" href="#">Edit</a>
           <a class="btn-sm btn-danger del" href="#">Del</a>
         </div>
