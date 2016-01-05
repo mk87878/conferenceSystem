@@ -22,18 +22,22 @@ include_once 'plugin/loginCheck.php';
 $conferenceName =isset($_POST['conferenceName']) ? $_POST['conferenceName']:'';
 if(isset($_POST['submit'])){
   include_once 'plugin/uploadFile.php';
-  $location = $_POST['location'];
-  $section = $_POST['section'];
-  $time = $_POST['time'];
-  $compere = $_POST['compere'];
-  $participant = $_POST['participant'];
-  $scorer = $_POST['scorer'];
-  $summary = $_POST['summary'];
-  $conferenceDetails = $uploadName;
-  $conSql = "INSERT INTO conference  (conferenceName,location,section,time,compere,participant,scorer,summary,conferenceDetails) VALUES ($conferenceName,'$location','$section','$time','$compere','$participant','$scorer','$summary','$conferenceDetails')";
-  $conRe = $db -> exec($conSql);
-  if($conRe){
-    echo "<script>location.href='conference.php';alert('add New Conference Record success!');</script>";
+  if(isset($uploadName)){
+    $conferenceDetails = $uploadName;
+    $location = $_POST['location'];
+    $section = $_POST['section'];
+    $time = $_POST['time'];
+    $compere = $_POST['compere'];
+    $participant = $_POST['participant'];
+    $scorer = $_POST['scorer'];
+    $summary = $_POST['summary'];
+    $conSql = "INSERT INTO conference  (conferenceName,location,section,time,compere,participant,scorer,summary,conferenceDetails) VALUES ($conferenceName,'$location','$section','$time','$compere','$participant','$scorer','$summary','$conferenceDetails')";
+    $conRe = $db -> exec($conSql);
+    if($conRe){
+      echo "<script>location.href='conference.php';alert('add New Conference Record success!');</script>";
+    }
+  }else{
+    echo "<script>location.href='addRecord.php';alert('Invalid file');</script>";
   }
 }
 
