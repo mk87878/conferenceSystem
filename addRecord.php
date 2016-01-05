@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+<?php
+include_once 'config/config.php';
+include_once 'plugin/login.php';
+
+
+?>
+
+
 <body>
 
 <div id="listBox" >
@@ -27,7 +36,7 @@
   <div id="content">
     <div class="container-fluid">
 <!--      内容 start-->
-      <form class="form-horizontal">
+      <form class="form-horizontal" method="post">
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Conference Name</label>
           <div class="col-xs-5">
