@@ -22,6 +22,8 @@ if(isset($_POST['submit'])){//判断是否有提交表单动作（是否需要�
         $_SESSION['userId'] = $loginInfo['id'];//登录用户id存入session
 
         echo "<script>alert('Login success. Welcome to here!');location.href='../control.php';</script>";
+    }else{
+        echo "<script>alert('Sorry! Login error.');history.back();</script>";
     }
 }
 
