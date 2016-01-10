@@ -9,6 +9,6 @@
  */
 
 if(empty($_SESSION['userName'])) {
-    echo "<script>alert('Not login or logon timeout.');location.href='./index.html';</script>";//登录超时或者未登录
+    echo "<script>alert('Not login or logon timeout.');location.href=index.html</script>";//登录超时或者未登录
     exit;
 }

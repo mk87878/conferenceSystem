@@ -8,5 +8,5 @@
  */
 
 if($_SESSION['admin'] != 1){//判断是否为管理员登录此页面
-    echo "<script>alert('Login failed. you are not the administrator!');location.href='./index.html';</script>";
+    echo "<script>alert('Login failed. you are not the administrator!');location.href=indindex.phpcript>";
 }
