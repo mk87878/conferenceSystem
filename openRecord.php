@@ -57,7 +57,7 @@ $info = $re -> fetch();
     <ul>
       <li><span><a href="#">NO.<?php echo $info['id']."&nbsp;"; echo $info['conferenceName']; ?></a></span></li>
     </ul>
-    <div class="pull-right"><button class="btn btn-xs btn-danger" id="printbtn">打印</button> </div>
+    <div class="pull-right"><button class="btn btn-xs btn-danger print" id="printbtn">打印</button> <a class="btn btn-xs btn-success back" href="conference.php">Back</a> </div>
     </div>
   <div id="content">
     <div class="container-fluid">

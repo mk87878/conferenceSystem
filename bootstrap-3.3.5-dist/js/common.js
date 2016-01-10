@@ -75,6 +75,14 @@ $(function(){
         title:"详情",
         placement:'top'
     });
+    $('.back').tooltip({
+        title:"返回",
+        placement:'left'
+    });
+    $('.print').tooltip({
+        title:"打印",
+        placement:'left'
+    });
     $('.newSection').tooltip({
         title:"增加新部门",
         placement:'left'

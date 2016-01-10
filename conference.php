@@ -32,6 +32,15 @@ include_once 'plugin/admin.php';
 $sql = "SELECT * FROM conference";
 $re = $db -> query($sql);
 $url = $_SERVER['PHP_SELF'];
+//删除
+if(isset($_GET['del'])) {
+  $id = isset($_GET['id']) ? $_GET['id'] : '';
+  $delSql = "DELETE FROM conference  WHERE id = '$id' ";
+  $delRe = $db->exec($delSql);
+  if ($delRe) {
+    echo "<meta http-equiv=refresh content='0; url = ".$url."'>";
+  }
+}
 
 ?>
 
@@ -41,7 +50,6 @@ $url = $_SERVER['PHP_SELF'];
   <div id="title">
     <ul>
       <li><span><a href="#">Conference Record</a></span></li>
-    
     </ul>
     <a style="color: red" class="glyphicon-plus pull-right newRecord" href="addRecord.php" >add New Conference Record</a>
     </div>
@@ -75,7 +83,7 @@ $url = $_SERVER['PHP_SELF'];
         <div class="col-xs-2">
           <a class="btn-sm btn-success edit" href="openRecord.php?id=<?php echo $info['id']; ?>">Open</a>
           <a class="btn-sm btn-primary edit" href="#">Edit</a>
-          <a class="btn-sm btn-danger del" href="#">Del</a>
+          <a class="btn-sm btn-danger del" href="conference.php?del=1&id=<?php echo $info['id']; ?>">Del</a>
         </div>
       </div>
         <?php

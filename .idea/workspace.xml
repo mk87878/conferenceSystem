@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cb73c3f-14fc-4f57-bc38-9598c0661f25" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/openRecord.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.PrintArea.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.5-dist/js/common.js" afterPath="$PROJECT_DIR$/bootstrap-3.3.5-dist/js/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conference.php" afterPath="$PROJECT_DIR$/conference.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.css" afterPath="$PROJECT_DIR$/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/admin.php" afterPath="$PROJECT_DIR$/plugin/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/loginCheck.php" afterPath="$PROJECT_DIR$/plugin/loginCheck.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/register.php" afterPath="$PROJECT_DIR$/plugin/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openRecord.php" afterPath="$PROJECT_DIR$/openRecord.php" />
     </list>
     <ignored path="conferenceSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +29,50 @@
     <splitter split-orientation="horizontal" split-proportion="0.71529245">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="addRecord.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="conference.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/conference.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.13513513">
+                  <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+                  <folding>
+                    <marker date="1452447085000" expanded="true" signature="1097:1121" placeholder="SELECT * FRO... conference" />
+                    <marker date="1452447085000" expanded="true" signature="1270:1310" placeholder="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="openRecord.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/openRecord.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-25.185184">
+                  <caret line="57" column="95" selection-start-line="57" selection-start-column="95" selection-end-line="57" selection-end-column="95" />
+                  <folding>
+                    <marker date="1452446510000" expanded="true" signature="864:905" placeholder="SELECT * FRO... conference" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="adminUser.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/adminUser.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-8.444445">
+                  <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+                  <folding>
+                    <marker date="1452327023000" expanded="true" signature="1101:1182" placeholder="SELECT user.... user" />
+                    <marker date="1452327023000" expanded="true" signature="1384:1443" placeholder="UPDATE user " />
+                    <marker date="1452327023000" expanded="true" signature="1878:1916" placeholder="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="addRecord.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/addRecord.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.054054">
-                  <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+                <state vertical-scroll-proportion="-22.518518">
+                  <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
                   <folding>
                     <marker date="1452327023000" expanded="true" signature="1254:1493" placeholder="INSERT INTO conference... " />
                   </folding>
@@ -50,21 +84,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/common.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.081491716">
+                <state vertical-scroll-proportion="-2.7407408">
                   <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bootstrap-3.3.5-dist/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.55099505">
+                  <caret line="81" column="13" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="13" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -103,10 +137,11 @@
         <option value="$PROJECT_DIR$/ajax-1.txt" />
         <option value="$PROJECT_DIR$/plugin/logout.php" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/conference.php" />
         <option value="$PROJECT_DIR$/css/common.css" />
+        <option value="$PROJECT_DIR$/addRecord.php" />
         <option value="$PROJECT_DIR$/bootstrap-3.3.5-dist/js/common.js" />
         <option value="$PROJECT_DIR$/openRecord.php" />
+        <option value="$PROJECT_DIR$/conference.php" />
       </list>
     </option>
   </component>
@@ -167,6 +202,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="conferenceSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conferenceSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conferenceSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,8 +314,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1452442937000" expanded="true" signature="1097:1121" placeholder="SELECT * FRO... conference" />
+            <marker date="1452447085000" expanded="true" signature="1097:1121" placeholder="SELECT * FRO... conference" />
+            <marker date="1452447085000" expanded="true" signature="1270:1310" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -313,53 +362,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7407408">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.518518">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <marker date="1452327023000" expanded="true" signature="1254:1493" placeholder="INSERT INTO conference... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.444445">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <folding>
+            <marker date="1452327023000" expanded="true" signature="1101:1182" placeholder="SELECT user.... user" />
+            <marker date="1452327023000" expanded="true" signature="1384:1443" placeholder="UPDATE user " />
+            <marker date="1452327023000" expanded="true" signature="1878:1916" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap-3.3.5-dist/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.55099505">
+          <caret line="81" column="13" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.081491716">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/openRecord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39640883">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        <state vertical-scroll-proportion="-25.185184">
+          <caret line="57" column="95" selection-start-line="57" selection-start-column="95" selection-end-line="57" selection-end-column="95" />
           <folding>
-            <marker date="1452445919000" expanded="true" signature="864:905" placeholder="SELECT * FRO... conference" />
-            <marker date="1452445919000" expanded="true" signature="3427:3574" placeholder="..." />
-            <marker date="1452445919000" expanded="true" signature="3436:3567" placeholder="..." />
+            <marker date="1452446510000" expanded="true" signature="864:905" placeholder="SELECT * FRO... conference" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conference.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41312742">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.13513513">
+          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1452442937000" expanded="true" signature="1097:1121" placeholder="SELECT * FRO... conference" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.054054">
-          <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
-          <folding>
-            <marker date="1452327023000" expanded="true" signature="1254:1493" placeholder="INSERT INTO conference... " />
+            <marker date="1452447085000" expanded="true" signature="1097:1121" placeholder="SELECT * FRO... conference" />
+            <marker date="1452447085000" expanded="true" signature="1270:1310" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
