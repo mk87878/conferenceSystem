@@ -16,9 +16,6 @@ session_start();
   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
   <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
   <!--其他引入项目-->
-  <!--  打印预览-->
-  <script language="javascript" src="js/jquery.PrintArea.js"></script>
-  <!--  打印预览-->
   <link href="css/main.css" rel="stylesheet" type="text/css" />
   <link href="css/common.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="css/list.css">
@@ -76,77 +73,11 @@ $url = $_SERVER['PHP_SELF'];
         <div class="col-xs-2 participant"><?php echo $info['participant']; ?></div>
         <div class="col-xs-1 scorer"><?php echo $info['scorer']; ?></div>
         <div class="col-xs-2">
-          <a class="btn-sm btn-success edit" data-toggle="modal" data-target="#Modal-<?php echo $i; ?>">Open</a>
+          <a class="btn-sm btn-success edit" href="openRecord.php?id=<?php echo $info['id']; ?>">Open</a>
           <a class="btn-sm btn-primary edit" href="#">Edit</a>
           <a class="btn-sm btn-danger del" href="#">Del</a>
         </div>
       </div>
-        <!-- Large modal -->
-        <div class="modal fade bs-example-modal-lg" id="Modal-<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">NO.<?php echo $i."&nbsp;"; echo $info['conferenceName']; ?></h4>
-              </div>
-              <div class="modal-body">
-<!--                modal content-->
-                <div class="container-fluid openHeight">
-                  <div class="row">
-                    <div class="col-xs-1 text-right openTitle section">Section:</div>
-                    <div class="col-xs-3"><?php echo $info['section']; ?></div>
-                    <div class="col-xs-offset-1 col-xs-1 text-right openTitle location">Location:</div>
-                    <div class="col-xs-3"><?php echo $info['location']; ?></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-1 text-right openTitle compere">Compere:</div>
-                    <div class="col-xs-3"><?php echo $info['compere']; ?></div>
-                    <div class="col-xs-offset-1 col-xs-1 text-right openTitle time">Time:</div>
-                    <div class="col-xs-3"><?php echo $info['time']; ?></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-1 text-right openTitle participant">Participant:</div>
-                    <div class="col-xs-3"><?php echo $info['participant']; ?></div>
-                    <div class="col-xs-offset-1 col-xs-1 text-right openTitle scorer">Scorer:</div>
-                    <div class="col-xs-3"><?php echo $info['scorer']; ?></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-1 openTitle summary">Summary:</div>
-                    <div class="col-xs-10"><?php echo $info['summary']; ?></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 openTitle">Conference Details:</div>
-                    <div class="col-xs-12">
-                      <?php
-                      $details = "upload/".$info['conferenceDetails'];
-                      $myFile = fopen($details, "r") or die("Unable to open file!");
-
-                      echo fread($myFile,filesize($details));
-                      //                    fclose($myFile);
-                      ?>
-                    </div>
-                  </div>
-                </div>
-<!--                modal content-->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="print">打印</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <script language="javascript">
-          //打印预览
-          $(document).ready(function(){
-            $("#print").click(function(){
-              $("#Modal-<?php echo $i; ?>").printArea({
-                mode:'popup'
-            });
-            });
-          });
-        </script>
-        <!-- Large modal -->
         <?php
         $i++;
       }

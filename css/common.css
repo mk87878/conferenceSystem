@@ -29,9 +29,22 @@ a {
 }
 .openTitle{
 	font-weight: bold;
+	font-size: 14px;
 	/*line-height:25px;*/
-	color: #8c0606;
+	color: #0d6004;
 }
 .openHeight{
 	line-height:37px;
+}
+.box-border{
+	border: #229159 solid 1px ;
+}
+.box-height-auto{
+	height: auto;
+}
+.box-margin{
+	margin: 10px;
+}
+.border-bottom{
+	border-bottom: #cdcdcd 1px dashed;
 }

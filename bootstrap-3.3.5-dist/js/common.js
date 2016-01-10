@@ -83,6 +83,10 @@ $(function(){
         title:"地点",
         placement:'top'
     });
+    $('.summary').tooltip({
+        title:"摘要",
+        placement:'top'
+    });
     $('.time').tooltip({
         title:"时间",
         placement:'top'
