@@ -37,7 +37,7 @@ a {
 .title {
     background-repeat: no-repeat;
     background-position: 10px center;
-    background-color: #009900;
+    background-color: #229159;
     color: #FFFFFF;
     font-size: 15px;
     position: relative;
@@ -62,16 +62,16 @@ a {
     cursor: pointer;
     padding: 0 10px 0 30px;
     margin: 7px 0 0;
-    background-color: #009900;
+    background-color: #229159;
     background-position: 10px center;
     border-left: 1px solid #006600;
-    border-bottom: 1px solid #006600
+    border-bottom: 1px solid #006600;
     font-weight: bold;
 }
 
 .leftsidebar_box dd {
     padding-left: 30px;
-    color: #009900;
+    color: #229159;
     display: block;
     border-left: 1px solid #006600;
     border-bottom: 1px solid #006600;

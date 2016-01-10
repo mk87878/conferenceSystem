@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,10 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
 </head>
-
+<?php
+include_once 'config/config.php';
+include_once 'plugin/logout.php';
+?>
 
 <body class="bg">
 <div class="container">

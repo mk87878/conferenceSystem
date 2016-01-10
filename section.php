@@ -25,7 +25,7 @@ $userId = isset($_SESSION['userId']) ? $_SESSION['userId']:'';
 $admin = isset($_SESSION['admin']) ? $_SESSION['admin']:'';
 //检查是否为管理员
 include_once 'plugin/admin.php';
-//查询数据库用户信息
+//查询数据库部门信息
 $sql = "SELECT * FROM section ";
 $re = $db -> query($sql);
 $url = $_SERVER['PHP_SELF'];

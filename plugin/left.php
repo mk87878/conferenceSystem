@@ -40,11 +40,11 @@
 
 <script>
 $(function(){
-	$(".leftsidebar_box dt").css({"background-color":"#009900"});
+	$(".leftsidebar_box dt").css({"background-color":"#229159"});
 	$(".leftsidebar_box dd").hide();
 	$(".leftsidebar_box dt").click(function(){
-		$(".leftsidebar_box dt").css({"background-color":"#009900"})
-		$(this).css({"background-color": "#009900"});
+		$(".leftsidebar_box dt").css({"background-color":"#229159"})
+		$(this).css({"background-color": "#229159"});
 
 		$(this).parent().find('dd').slideToggle();
 		$(this).parent().find('dd').addClass("menu_chioce");
