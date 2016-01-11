@@ -53,6 +53,17 @@ a {
     border-bottom-color: #006600;
     border-left-color: #006600;
 }
+.title a{
+    color: #FFFFFF;
+    font-size: 15px;
+    position: relative;
+    line-height: 32px;
+    cursor: pointer;
+    padding: 0 10px 0 20px;
+    margin: 0 0 18px;
+    font-weight: bold;
+
+}
 
 .leftsidebar_box dt {
     color: #FFFFFF;

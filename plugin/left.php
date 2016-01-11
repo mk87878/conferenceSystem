@@ -18,7 +18,7 @@
 
 <div class="container">
   <div class="leftsidebar_box">
-<DIV class="title">· Control</DIV>
+<DIV class="title"><a href="../main.php"  target="main" >· Control</a></DIV>
     <dl>
       <dt>· Conference</dt>
         <dd class="first_dd"><a href="../conference.php"  target="main" >·
