@@ -86,13 +86,7 @@ $info = $re -> fetch();
           <div class="row border-bottom">
             <div class="col-xs-12"><span class="details openTitle ">Conference Details:</span></div>
             <div class="col-xs-12">
-              <?php
-              $details = "upload/".$info['conferenceDetails'];
-              $myFile = fopen($details, "r") or die("Unable to open file!");
-
-              echo fread($myFile,filesize($details));
-              //                    fclose($myFile);
-              ?>
+              <?php echo $info['conferenceDetails']; ?>
             </div>
           </div>
         </div>

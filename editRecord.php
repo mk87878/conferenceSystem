@@ -20,31 +20,26 @@
 <?php
 include_once 'config/config.php';
 include_once 'plugin/loginCheck.php';
-$conferenceName =isset($_POST['conferenceName']) ? $_POST['conferenceName']:'';
 if(isset($_POST['submit'])){
-  include_once 'plugin/uploadFile.php';
-  $details = "upload/".$uploadName;
-//  $myFile = fopen($details, "r") or die("Unable to open file!");
-  $conferenceDetails = file_get_contents($details);
-  $conferenceDetails = mb_convert_encoding($conferenceDetails, 'utf-8', 'gbk');
-
-  if(isset($uploadName)){
-    $location = $_POST['location'];
-    $section = $_POST['section'];
-    $time = $_POST['time'];
-    $compere = $_POST['compere'];
-    $participant = $_POST['participant'];
-    $scorer = $_POST['scorer'];
-    $summary = $_POST['summary'];
-    $conSql = "INSERT INTO conference  (conferenceName,location,section,time,compere,participant,scorer,summary,conferenceDetails) VALUES ($conferenceName,'$location','$section','$time','$compere','$participant','$scorer','$summary','$conferenceDetails')";
-    $conRe = $db -> exec($conSql);
-    if($conRe){
-      echo "<script>location.href='conference.php';alert('add New Conference Record success!');</script>";
-    }
-  }else{
-    echo "<script>location.href='addRecord.php';alert('Invalid file');</script>";
+  $id = $_POST['id'];
+  $conferenceName =$_POST['conferenceName'];
+  $conferenceDetails = $_POST['conferenceDetails'];
+  $location = $_POST['location'];
+  $section = $_POST['section'];
+  $time = $_POST['time'];
+  $compere = $_POST['compere'];
+  $participant = $_POST['participant'];
+  $scorer = $_POST['scorer'];
+  $summary = $_POST['summary'];
+  $conSql = "UPDATE conference SET conferenceName = '$conferenceName', conferenceDetails = '$conferenceDetails', location = '$location', section = '$section', time = '$time',  compere= '$compere', participant = '$participant', scorer = '$scorer', summary = '$summary' WHERE id = '$id' ";
+  $conRe = $db -> exec($conSql);
+  if($conRe){
+    echo "<script>location.href='conference.php';alert('update Conference Record success!');</script>";
+  } else {
+    echo "<script>location.href='addRecord.php';alert('update Conference Record failed!');</script>";
   }
 }
+
 
 
 ?>
@@ -55,73 +50,79 @@ if(isset($_POST['submit'])){
 <div id="listBox" >
   <div id="title">
     <ul>
-      <li><span><a href="#">add New Conference Record</a></span></li>
+      <li><span><a href="#">Edit Conference Record</a></span></li>
 
     </ul>
     </div>
-  <div id="content">
+  <?php
+  $id = $_GET['id'];
+  $sql = "SELECT * FROM conference WHERE id = '$id' ";
+  $re = $db -> query($sql);
+  $show = $re -> fetch();
+  ?>
+  <div id="main">
     <div class="container-fluid">
 <!--      内容 start-->
       <form class="form-horizontal" method="post" enctype="multipart/form-data" >
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Conference Name</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" name="conferenceName">
+            <input type="text" class="form-control" name="conferenceName" value="<?php echo $show['conferenceName'] ?>">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Section</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" name="section" >
+            <input type="text" class="form-control" name="section"  value="<?php echo $show['section'] ?>">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Location</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" name="location">
+            <input type="text" class="form-control" name="location" value="<?php echo $show['location'] ?>">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Time</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" name="time">
+            <input type="text" class="form-control" name="time"  value="<?php echo $show['time'] ?>">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Compere</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" name="compere">
+            <input type="text" class="form-control" name="compere" value="<?php echo $show['compere'] ?>">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Participant</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" name="participant">
+            <input type="text" class="form-control" name="participant" value="<?php echo $show['participant'] ?>">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Scorer</label>
           <div class="col-xs-5">
-            <input type="text" class="form-control" name="scorer">
+            <input type="text" class="form-control" name="scorer" value="<?php echo $show['scorer'] ?>">
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Summary</label>
           <div class="col-xs-5">
-            <textarea class="form-control" rows="2" name="summary"></textarea>
+            <textarea class="form-control" rows="1" name="summary"> <?php echo $show['summary'] ?></textarea>
           </div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label">Details</label>
-          <div class="col-xs-2">
-            <input type="file" name="file" placeholder="only .txt file">
+          <div class="col-xs-5">
+            <textarea class="form-control" rows="3" name="conferenceDetails"><?php echo $show['conferenceDetails'] ?></textarea>
           </div>
-          <div class="col-xs-3 text-danger">only '.txt' file</div>
         </div>
         <div class="form-group-sm form-group">
           <label for="" class="col-xs-2 control-label"></label>
           <div class="col-xs-5">
-            <button type="submit" name="submit" class="btn btn-sm btn-success col-xs-12">Add</button>
+            <input type="hidden" value="<?php echo $show['id']; ?>" name="id">
+            <button type="submit" name="submit" class="btn btn-sm btn-success col-xs-12">Edit</button>
           </div>
         </div>
 

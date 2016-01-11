@@ -82,7 +82,7 @@ if(isset($_GET['del'])) {
         <div class="col-xs-1 scorer"><?php echo $info['scorer']; ?></div>
         <div class="col-xs-2">
           <a class="btn-sm btn-success edit" href="openRecord.php?id=<?php echo $info['id']; ?>">Open</a>
-          <a class="btn-sm btn-primary edit" href="#">Edit</a>
+          <a class="btn-sm btn-primary edit" href="editRecord.php?id=<?php echo $info['id']; ?>">Edit</a>
           <a class="btn-sm btn-danger del" href="conference.php?del=1&id=<?php echo $info['id']; ?>">Del</a>
         </div>
       </div>

@@ -19,6 +19,14 @@
 	float: none;
 	margin: 5px auto;
 }
+#main {
+	width: 98%;
+	height: 450px;
+	padding: 0px;
+	clear: both;
+	float: none;
+	margin: 5px auto;
+}
 #content dt{
 	color: #ffffff;
 	background-color: #ff3366;
