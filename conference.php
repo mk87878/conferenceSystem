@@ -27,7 +27,7 @@ $userName = isset($_SESSION['userName']) ? $_SESSION['userName']:'';
 $userId = isset($_SESSION['userId']) ? $_SESSION['userId']:'';
 $admin = isset($_SESSION['admin']) ? $_SESSION['admin']:'';
 //检查是否为管理员
-include_once 'plugin/admin.php';
+include_once 'plugin/loginCheck.php';
 //查询数据库用户信息
 $sql = "SELECT * FROM conference";
 $re = $db -> query($sql);
@@ -81,9 +81,11 @@ if(isset($_GET['del'])) {
         <div class="col-xs-2 participant"><?php echo $info['participant']; ?></div>
         <div class="col-xs-1 scorer"><?php echo $info['scorer']; ?></div>
         <div class="col-xs-2">
-          <a class="btn-sm btn-success edit" href="openRecord.php?id=<?php echo $info['id']; ?>">Open</a>
+          <a class="btn-sm btn-success open" href="openRecord.php?id=<?php echo $info['id']; ?>">Open</a>
           <a class="btn-sm btn-primary edit" href="editRecord.php?id=<?php echo $info['id']; ?>">Edit</a>
+          <?php if($_SESSION['admin'] == 1){?>
           <a class="btn-sm btn-danger del" href="conference.php?del=1&id=<?php echo $info['id']; ?>">Del</a>
+          <?php } ?>
         </div>
       </div>
         <?php

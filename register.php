@@ -63,7 +63,7 @@ if(isset($_POST['edit'])){
     <?php if(empty($id)){
         echo "<h2 class='text-center'>come quick! join us!</h2>";
     }else{
-        echo "<h2 class='text-center'>My Profile <small><a href='control.php' class='btn-sm btn-danger'> back</a></small></h2>";
+        echo "<h2 class='text-center'>My Profile <button class='btn btn-sm btn-danger' onclick='history.back()'>back</button></h2>";
     } ?>
     <form method="post" class="form-horizontal  col-sm-12">
         <div class="form-group">

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +21,12 @@
 <DIV class="title">· Control</DIV>
     <dl>
       <dt>· Conference</dt>
-      <dd class="first_dd"><a href=""  target="main">· Conference</a></dd>
+        <dd class="first_dd"><a href="../conference.php"  target="main" >·
+                <span data-toggle="tooltip" data-placement="left" data-original-title="会议信息">Conference</span>
+            </a></dd>
+        <dd class="first_dd"><a href="../register.php?userId=<?php echo $_SESSION['userId'];?>"  target="_parent" data-toggle="tooltip" data-placement="top" data-original-title="修改个人资料">· My Profile</a> </dd>
     </dl>
+      <?php if($_SESSION['admin'] == 1){?>
       <dl>
           <dt>· adminControl</dt>
           <dd class="first_dd"><a href="../adminUser.php"  target="main" >·
@@ -30,11 +35,8 @@
           <dd class="first_dd"><a href="../section.php"  target="main" >·
                   <span data-toggle="tooltip" data-placement="left" data-original-title="部门信息">Section</span>
               </a></dd>
-          <dd class="first_dd"><a href="../conference.php"  target="main" >·
-                  <span data-toggle="tooltip" data-placement="left" data-original-title="会议信息">Conference</span>
-              </a></dd>
-
       </dl>
+      <?php } ?>
   </div>
 </div>
 

@@ -83,6 +83,10 @@ $(function(){
         title:"打印",
         placement:'left'
     });
+    $('.open').tooltip({
+        title:"打开",
+        placement:'left'
+    });
     $('.newSection').tooltip({
         title:"增加新部门",
         placement:'left'

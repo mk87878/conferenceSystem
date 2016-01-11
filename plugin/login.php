@@ -17,11 +17,15 @@ if(isset($_POST['submit'])){//判断是否有提交表单动作（是否需要�
     $count = $loginRe -> rowCount();
     if($count){
         $loginInfo = $loginRe -> fetch();//取出$loginRe中的一行存入$loginInfo的数组
-        $_SESSION['admin'] = $loginInfo['admin'];//登录用户管理员权限存入session
-        $_SESSION['userName'] = $loginInfo['userName'];//登录用户名存入session
-        $_SESSION['userId'] = $loginInfo['id'];//登录用户id存入session
+        if(!$loginInfo['block']){
+            $_SESSION['admin'] = $loginInfo['admin'];//登录用户管理员权限存入session
+            $_SESSION['userName'] = $loginInfo['userName'];//登录用户名存入session
+            $_SESSION['userId'] = $loginInfo['id'];//登录用户id存入session
+            echo "<script>alert('Login success. Welcome to here!');location.href='../control.php';</script>";
+        }else{
+            echo "<script>alert('Sorry! Login error. your user  blocked.');history.back();</script>";
 
-        echo "<script>alert('Login success. Welcome to here!');location.href='../control.php';</script>";
+        }
     }else{
         echo "<script>alert('Sorry! Login error.');history.back();</script>";
     }

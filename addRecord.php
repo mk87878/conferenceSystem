@@ -24,9 +24,9 @@ $conferenceName =isset($_POST['conferenceName']) ? $_POST['conferenceName']:'';
 if(isset($_POST['submit'])){
   include_once 'plugin/uploadFile.php';
   $details = "upload/".$uploadName;
-//  $myFile = fopen($details, "r") or die("Unable to open file!");
-  $conferenceDetails = file_get_contents($details);
-  $conferenceDetails = mb_convert_encoding($conferenceDetails, 'utf-8', 'gbk');
+  //编码转换并赋值
+  include_once 'plugin/fileCode.php';
+  $conferenceDetails = auto_read($details);
 
   if(isset($uploadName)){
     $location = $_POST['location'];
