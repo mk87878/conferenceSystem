@@ -41,6 +41,13 @@ if(isset($_GET['del'])) {
     echo "<meta http-equiv=refresh content='0; url = ".$url."'>";
   }
 }
+if(isset($_POST['search'])) {
+  $searchItem = isset($_POST['searchItem']) ? $_POST['searchItem']:'';
+  $searchText = isset($_POST['searchText']) ? $_POST['searchText']:'';
+  $searchSql = "SELECT * FROM conference WHERE ".$searchItem." = '$searchText' ";
+  $re = $db->query($searchSql);
+}
+
 
 ?>
 
@@ -51,8 +58,45 @@ if(isset($_GET['del'])) {
     <ul>
       <li><span><a href="#">Conference Record</a></span></li>
     </ul>
-    <a style="color: red" class="glyphicon-plus pull-right newRecord" href="addRecord.php" >add New Conference Record</a>
+    <div class="pull-right">
+    <a  class="btn-sm btn-success" data-toggle="modal" data-target="#Modal">Search</a>
+      <a  class="btn-sm btn-primary" href="conference.php">All Conference</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a style="color: red" class="glyphicon-plus newRecord" href="addRecord.php" >add New Conference Record</a>
     </div>
+    </div>
+  <!--        弹出add模态框 start-->
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" >
+      <form  method="post">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row form-group">
+                  <select class="form-control" name="searchItem">
+                    <option value="conferenceName">会议名称</option>
+                    <option value="id">会议编号</option>
+                    <option value="section">部门</option>
+                  </select>
+              </div>
+              <div class="row form-group">
+                <input type="text" class="form-control" name="searchText">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" name="search" class="btn btn-success">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--        弹出add模态框 end-->
   <div id="content">
     <div class="container-fluid listBg contentHig">
       <div class="row text-center title">
